@@ -1,4 +1,4 @@
-import { BsArrowLeftSquareFill, BsPrinterFill } from 'react-icons/Bs';
+import { BsArrowLeftSquareFill, BsPrinterFill } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { FaShare } from 'react-icons/fa';
 import { BiSolidDownload } from 'react-icons/bi';
