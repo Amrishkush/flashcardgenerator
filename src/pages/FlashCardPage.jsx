@@ -1,13 +1,14 @@
-import { BsArrowLeftSquareFill, BsPrinterFill } from 'react-icons/bs';
+// import { BsArrowLeftSquareFill, BsPrinterFill } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { FaShare } from 'react-icons/fa';
-import { BiSolidDownload } from 'react-icons/bi';
+import { BiArrowFromRight, BiSolidDownload } from 'react-icons/bi';
 import { FaLessThan, FaGreaterThan } from 'react-icons/fa';
 import PrintDownloadData from "../features/PrintDownloadData";
 import { saveAs } from 'file-saver';
 import { pdf } from '@react-pdf/renderer';
 import MyModal from '../features/MyModal';
 import { useNavigate } from 'react-router-dom';
+import { AiFillPrinter } from 'react-icons/ai';
 
 function FlashCardPage({ selectedGroupId, activeGroupName, activeGroupDesc }) {
   const [cards, setCards] = useState([]);
@@ -53,7 +54,7 @@ function FlashCardPage({ selectedGroupId, activeGroupName, activeGroupDesc }) {
   return (
     <div className="container mx-auto">
       <div className="p-5 flex flex-col lg:flex-row items-center gap-x-2">
-        <BsArrowLeftSquareFill size={30} className='cursor-pointer' onClick={() => navigateBack(-1)} />
+        <BiArrowFromRight size={30} className='cursor-pointer' onClick={() => navigateBack(-1)} />
         <div className="text-center lg:text-left">
         <h2 className="font-black text-xl  break-all lg:break-normal">
             {activeGroupName}
@@ -106,7 +107,7 @@ function FlashCardPage({ selectedGroupId, activeGroupName, activeGroupDesc }) {
           </button>
 
           <button className="bg-gray-50 py-1 flex w-full mb-2" type="button" onClick={handlePrint}>
-            <BsPrinterFill size={44} className="pl-6" /> <span className="pl-4 mt-2">Print</span>
+            <AiFillPrinter size={44} className="pl-6" /> <span className="pl-4 mt-2">Print</span>
           </button>
         </div>
       </div>
